@@ -1,5 +1,7 @@
 package com.example.testapp.data.remote.dto
 
+import com.example.testapp.domain.model.RegistrationForm
+
 data class RegistrationFormDto(
     val NAME: String,
     val PERSONAL_GENDER: String,
@@ -11,4 +13,19 @@ data class RegistrationFormDto(
     val LOGIN: String,
     val PASSWORD: String,
     val CONFIRM_PASSWORD: String,
-)
+) {
+    fun toRegistrationForm(): RegistrationForm {
+        return RegistrationForm(
+            name = NAME,
+            personalGender = PERSONAL_GENDER,
+            personalBirthday = PERSONAL_BIRTHDAY,
+            personalMobile = PERSONAL_MOBILE,
+            email = EMAIL,
+            workCompany = WORK_COMPANY,
+            ufServiceNumber = UF_SERVICE_NUMBER,
+            login = LOGIN,
+            password = PASSWORD,
+            confirmPassword = CONFIRM_PASSWORD
+        )
+    }
+}
