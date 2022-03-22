@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    tools:context=".presentation.auth_home.HomeFragment">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/app_bar_height">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/app_bar_divider"
+            android:layout_gravity="bottom"
+            android:background="@color/gray"/>
+    </FrameLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingBottom="@dimen/layout_padding"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/verticalLeftGuideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.2" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/verticalRightGuideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.8" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/horizontalTopLogoGuideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="@dimen/horizontal_guideline_separator_height" />
+
+            <ImageView
+                android:id="@+id/ivLogo"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="@dimen/layout_margin"
+                android:src="@drawable/logo"
+                app:layout_constraintBottom_toTopOf="@+id/horizontalBottomLogoGuideline2"
+                app:layout_constraintEnd_toStartOf="@+id/verticalRightGuideline"
+                app:layout_constraintStart_toStartOf="@+id/verticalLeftGuideline"
+                app:layout_constraintTop_toTopOf="@+id/horizontalTopLogoGuideline2" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/horizontalTopLogoGuideline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="@dimen/horizontal_top_guideline_logo_height" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/horizontalBottomLogoGuideline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="@dimen/horizontal_bottom_guideline_logo_height" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/horizontalButtonsGuideline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="168dp" />
+
+            <TextView
+                android:id="@+id/tvHomeHint"
+                style="@style/Body2Regular"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/layout_margin"
+                android:gravity="center"
+                android:text="@string/home_hint"
+                app:layout_constraintEnd_toStartOf="@+id/verticalRightGuideline"
+                app:layout_constraintStart_toStartOf="@+id/verticalLeftGuideline"
+                app:layout_constraintTop_toTopOf="@+id/horizontalTopLogoGuideline" />
+
+            <Button
+                android:id="@+id/btnToLogin"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/home_button_reg_height"
+                android:layout_margin="@dimen/layout_margin"
+                android:text="@string/button_enter"
+                app:layout_constraintEnd_toStartOf="@+id/verticalRightGuideline"
+                app:layout_constraintStart_toStartOf="@+id/verticalLeftGuideline"
+                app:layout_constraintTop_toBottomOf="@+id/tvHomeHint" />
+
+
+            <View
+                android:id="@+id/homeSeparatorLeft"
+                android:layout_width="@dimen/home_separator_width"
+                android:layout_height="@dimen/separator_height"
+                android:layout_marginEnd="@dimen/separator_margin"
+                android:background="@color/dark_gray"
+                app:layout_constraintBottom_toBottomOf="@+id/tvDivider"
+                app:layout_constraintEnd_toStartOf="@+id/tvDivider"
+                app:layout_constraintTop_toTopOf="@+id/tvDivider" />
+
+            <View
+                android:id="@+id/homeSeparatorRight"
+                android:layout_width="@dimen/home_separator_width"
+                android:layout_height="@dimen/separator_height"
+                android:layout_marginStart="@dimen/separator_margin"
+                android:background="@color/dark_gray"
+                app:layout_constraintBottom_toBottomOf="@+id/tvDivider"
+                app:layout_constraintStart_toEndOf="@+id/tvDivider"
+                app:layout_constraintTop_toTopOf="@+id/tvDivider" />
+
+            <TextView
+                android:id="@+id/tvDivider"
+                style="@style/Body2Regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/layout_margin"
+                android:text="@string/homeDividerText"
+                app:layout_constraintEnd_toStartOf="@+id/verticalRightGuideline"
+                app:layout_constraintStart_toStartOf="@+id/verticalLeftGuideline"
+                app:layout_constraintTop_toBottomOf="@+id/btnToLogin" />
+
+            <Button
+                android:id="@+id/btnToRegister"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/home_button_reg_height"
+                android:layout_margin="@dimen/layout_margin"
+                android:elevation="0dp"
+                android:backgroundTint="@color/white"
+                android:text="@string/button_register"
+                android:textColor="@color/blue"
+                app:layout_constraintEnd_toStartOf="@+id/verticalRightGuideline"
+                app:layout_constraintStart_toStartOf="@+id/verticalLeftGuideline"
+                app:layout_constraintTop_toBottomOf="@+id/tvDivider" />
+
+            <TextView
+                android:id="@+id/tvLogoText"
+                style="@style/SubheadBold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/layout_margin"
+                android:gravity="center"
+                android:text="@string/logo_text"
+                app:layout_constraintBottom_toTopOf="@+id/horizontalButtonsGuideline2"
+                app:layout_constraintEnd_toStartOf="@+id/verticalRightGuideline"
+                app:layout_constraintStart_toStartOf="@+id/verticalLeftGuideline"
+                app:layout_constraintTop_toTopOf="@+id/horizontalBottomLogoGuideline2" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

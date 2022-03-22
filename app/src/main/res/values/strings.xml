@@ -1,3 +1,36 @@
 <resources>
     <string name="app_name">TestApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home_hint">Если вы зарегистрированы на HOMAG RUSSLAND, используйте ваши логин и пароль для входа.</string>
+    <string name="homeDividerText">или</string>
+    <string name="button_enter">Вход</string>
+    <string name="button_register">Регистрация</string>
+    <string name="logo">logo</string>
+    <string name="male_gender">Мужской</string>
+    <string name="female_gender">Женский</string>
+    <string name="et_name_hint">Фамилия Имя Отчество</string>
+    <string name="et_birthday_hint">дд.мм.гггг</string>
+    <string name="et_email_hint">Электронная почта</string>
+    <string name="et_company_name_hint">Ваша компания</string>
+    <string name="et_service_number_hint">1234567890</string>
+    <string name="et_phone_number_hint">+7 900 000 00 00</string>
+    <string name="et_login_hint">Логин</string>
+    <string name="et_password_hint">Пароль</string>
+    <string name="rb_confirm_data">Подтверждаю корректность введенных данных и даю согласие на обработку моих персональных данных</string>
+    <string name="btn_register_text">Зарегистрироваться</string>
+    <string name="text_view_name">Ф.И.О</string>
+    <string name="btn_login">Войти</string>
+    <string name="text_view_gender">Пол</string>
+    <string name="text_view_birthday">Дата рождения</string>
+    <string name="text_view_number">Телефон</string>
+    <string name="text_view_email">Электронная почта</string>
+    <string name="text_view_company_name">Наименование компании</string>
+    <string name="text_view_company_service_number">Сервисный номер</string>
+    <string name="text_view_password">Пароль</string>
+    <string name="text_view_confirm_password">Подвердите пароль</string>
+    <string name="duis_aute_irure_dolor_in_reprehenderit_in_voluptate_velit">Duis aute irure dolor in reprehenderit in voluptate velit</string>
+    <string name="text_view_remind_password">Напомнить пароль</string>
+    <string name="logo_text">Заказывайте запасные части не отходя от станка</string>
+    <string name="btn_back">Назад</string>
 </resources>
