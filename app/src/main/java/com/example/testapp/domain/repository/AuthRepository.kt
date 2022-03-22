@@ -1,15 +1,26 @@
 package com.example.testapp.domain.repository
 
 import com.example.testapp.core.utils.Resource
-import com.example.testapp.domain.model.LoginForm
 import com.example.testapp.domain.model.LoginResponse
-import com.example.testapp.domain.model.RegistrationForm
-import com.example.testapp.domain.model.RegistrationResponse
-import kotlinx.coroutines.flow.Flow
+import com.example.testapp.domain.model.RegisterResponse
 
 interface AuthRepository {
 
-    suspend fun registerUser(registrationForm: RegistrationForm): Flow<Resource<RegistrationResponse>>
+    suspend fun registerUser(
+        name: String,
+        personalGender: String,
+        personalBirthday: String,
+        personalMobile: String,
+        email: String,
+        workCompany: String,
+        ufServiceNumber: String,
+        login: String,
+        password: String,
+        confirmPassword: String
+    ): Resource<RegisterResponse>
 
-    suspend fun loginUser(loginForm: LoginForm): Flow<Resource<LoginResponse>>
+    suspend fun loginUser(
+        login: String,
+        password: String
+    ): Resource<LoginResponse>
 }
